@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">    
+    <title>eventos js</title>
+</head>
+<body>
+<section id="eventosclick"> 
+    <div class="titulo"><h1>eventos click y over</h1></div>
+    <div class="container">
+        <div id="caja1">
+            <h1>presione una vez</h1>
+        </div>
+        <div id="caja2">
+            <h1>presione dos veces</h1>
+        </div>
+    </div>
+</section>
+
+<section id="eventosteclado">
+    <div class="titulo"><h1>eventos teclados</h1></div>    
+    <div class="container">
+        <input type="text" name="" id="texto" placeholder="ingrese texto">
+        <input type="text" name="" id="texto2" disabled>
+    </div>
+</section>
+
+
+<section id="eventosFormularios">
+    <div class="titulo"><h1>Eventos Formularios</h1></div>
+    <div class="ejercicio1 container2">
+        <form action="">
+            <h3>ejercicio1</h3>
+            <input type="button" class="boton1" value="incrementar" onclick="incrementar()">
+        </form>
+    </div>
+    <div class="ejercicio2 container2">
+        <h3>ejercicio2</h3>
+        <form action="">
+            <p>Ingrese su nombre:<input type="text" id="nombre"></p>
+            <p>ingrese su edad: <input type="text" id="edad"> </p>
+            <input type="button" value="enviar" class="boton1" onclick="persona()">
+        </form>
+    </div>
+
+    <div class="ejercicio3 container2">
+        <h3>ejercicio3</h3>
+        <p>Ingrese la contraseña<input type="password" id="contraseña"> </p>
+        <input type="button" value="enviar" class="boton1" onclick="contraseña()">
+    </div>
+
+    <div class="ejercicio4 container2">
+        <h3>ejercicio4</h3>
+        <form action="">
+            <p>
+                <select id="select1" onchange="cambiarColor()">
+                    <option value="ff0000">rojo</option>
+                    <option value="00ff00">verde</option>
+                    <option value="0000ff">azul</option>
+                </select>
+            </p>
+            <P>numero de indice seleccionado en le objeto SELECT<input type="text" id="text1"></P>
+            <p>texto seleccionado <input type="text" id="text2"></p>
+            <p>valor asociado <input type="text"  id="text3"></p>
+        </form>
+    </div>
+
+    <div class="ejercicio5 container2">
+        <h3>ejercicio5</h3>
+        <input type="checkbox"  id="checkbox1">Pseint <br>
+        <input type="checkbox"  id="checkbox2">JavaScript <br>
+        <input type="checkbox"  id="checkbox3">PHP <br>
+        <input type="checkbox"  id="checkbox4">Phyton <br>
+        <input type="button" value="mostrar" onclick="saber()" class="boton1">
+    </div>
+
+    <div class="ejercicio6  container2">
+        <textarea  id="curriculum" cols="70" rows="10"></textarea>
+        <input type="button" value="mostar" onclick="texto()" class="boton1">
+    </div>
+</section>
+
+<section id="ExprecionesRegulares">
+    <div class="titulo"><h1>Exprecinoes Regulares</h1></div>
+    <div class="LetraVocal container2">
+       <label for="LetraVocal">ejemplo expresiones regular: Letra+Vocal</label>
+       <input type="text" id="LetraVocal">
+        <input type="button" value="ingresar" class="boton1" onclick="LetraVocal()">
+        <p id="TextoVerificar"></p>
+    </div>
+    
+    <div class="LetraVocalNumero container2">
+       <label for="LetraVocalNumero">ejemplo expresiones regular: Letra+Vocal+Numero+Longitud</label>
+       <p>Texto debe contener 6 caracteres: Letras/Vocales/Números</p>
+       <input type="text" id="LetraVocalNumero">
+        <input type="button" value="ingresar" class="boton1" onclick="LetraVocalNumero()">
+        <p id="TextoVerificar2"></p>
+    </div>
+
+    <div class="LetraVocalNumero container2">
+        <label for="Numeros">Ejemplo Expresión regular: Números</label>
+        <input type="text" id="Numeros">
+         <input type="button" value="ingresar" class="boton1" onclick="Numeros()">
+         <p id="TextoVerificar3"></p>
+     </div>
+</section>
+
+<section id="DOM">
+    <div class="titulo"><h1>Creacion de DOM</h1></div>
+    <div class="creacionDOM container2">
+        <input type="button" value="Crear" class="boton1" id="btnCrear" onclick="ftnCrear()">
+        <input type="button" value="Duplicar" class="boton1" id="brnDuplicar" onclick="ftnDuplicar()">
+        <input type="button" value="Eliminar" class="boton1" id="btnEliminar" onclick="ftnEliminar()">
+    </div>
+    <div id="copia">
+        <p id="nuevoTexto"></p>         
+    </div>
+</section>
+
+<section id="Manipulacion">
+    <div class="titulo"><h1>Manipulacion de Imagen</h1></div>
+        <div class="container2">
+            <h2>galeria</h2>
+            <div class="visualizar">
+            <img src="./resource/dell-7Bmk9mAXP2I-unsplash.jpg" id="pantalla" >
+            </div>
+        </div>
+        <div class="miniaturas container">
+            <img src="./resource/dmitry-ganin-Y0V5Qrj3DwE-unsplash.jpg" id="img1V" >
+            <img src="./resource/resource-database-VGiPP41zf9U-unsplash.jpg" id="img2V" >
+            <img src="./resource/samsung-memory-j9gNPjxVmi0-unsplash.jpg" id="img3V">
+            <img src="./resource/sidekix-media-pyJgggne0W4-unsplash.jpg" 
+            id="img4V">
+        </div>
+
+</section>
+
+<section id="CreacionLista"> 
+    <div class="titulo"><h1>Creacion de listas</h1></div>
+    <div class="container ">
+        <div id="principal" class="card card-body col-sm-12">
+            <h4 class="title fs-2">Agregar Elementos:</h4>
+                <form class="form col-auto mb-3" id="frmLista">
+                        <input type="text" id="txtElemento" class="form-control" placeholder="Escribir elemento">
+                        <input type="submit" value="Agregar" class="btn btn-light btn-outline-primary">
+                </form>
+                <h4 class="title fs-2">Elementos:</h4>
+                <ul id="elementos" class="list-group">
+                    <li class="list-group-item">Elemento 1 
+                        <button class="btn btn-light btn-outline-danger btn-sm float-end delete">X</button></li>
+                    <li class="list-group-item">Elemento 2 
+                        <button class="btn btn-light btn-outline-danger btn-sm float-end delete">X</button></li>
+                    <li class="list-group-item">Elemento 3 
+                        <button class="btn btn-light btn-outline-danger btn-sm float-end delete">X</button></li>
+                    <li class="list-group-item">Elemento 4 
+                        <button class="btn btn-light btn-outline-danger btn-sm float-end delete">X</button></li>
+                    
+                </ul>
+        </div>
+    </div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>

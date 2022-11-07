@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section1{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section2{
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+}
+.img{
+    width: 150px;
+    height: 150px;
+}
+.puz-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
